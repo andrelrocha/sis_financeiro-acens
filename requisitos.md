@@ -51,6 +51,8 @@ Fornecer endpoints para registro, login e logout de usuários.
 
 Opcoes de Read de gastos e entradas devem retornar com datas dos ultimos 1, 7, 15, 30, 90 dias
 
+Deve ser possível quais usuários estão online, em que todo login altere o status "active"
+
 Usario deve poder anotar comentários nas entradas e saídas (OPCIONAL, NULL OPTION ENABLED)
 
 DRE deve ser uma rota já fixa que retorne o calculo realizado no backend do saldo.
