@@ -1,10 +1,9 @@
-import e from "express";
 import models from "../../../models";
 
 class listUserByIdUseCase {
     async execute(id: string) {
         try {
-            const user = await models.People.scope("all").findByPk(id, {
+            const user = await models.Users.scope("all").findByPk(id, {
                 paranoid: false
             });
     

@@ -5,7 +5,7 @@ class ListUsersUseCase {
     try {   
         const [field, orderType] = order.split(":");
             
-            const users = await models.User.findAll({
+            const users = await models.Users.findAll({
                 offset: (page - 1) * limit,
                 limit: limit,
                 order: [[field, orderType === "1" ? "ASC" : "DESC"]]

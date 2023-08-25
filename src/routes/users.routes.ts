@@ -4,6 +4,8 @@ import { listAllUsers } from "../useCases/User/listAllUsers";
 
 const usersRoutes = Router();
 
-usersRoutes.get("/", listAllUsers.handle);
+usersRoutes.get("/all", (req, res, next) => {
+    return listAllUsers.handle(req, res, next);
+});
 
 export { usersRoutes };
