@@ -1,11 +1,11 @@
-import models from "../../../models";
+import { Users } from "../../../models";
 
 class ListUsersUseCase {
   async execute(limit: number, page: number, order: any) {
     try {   
         const [field, orderType] = order.split(":");
             
-            const users = await models.Users.findAll({
+            const users = await Users.findAll({
                 offset: (page - 1) * limit,
                 limit: limit,
                 order: [[field, orderType === "1" ? "ASC" : "DESC"]]
@@ -19,4 +19,4 @@ class ListUsersUseCase {
   }
 }
 
-export default ListUsersUseCase;
+export { ListUsersUseCase };

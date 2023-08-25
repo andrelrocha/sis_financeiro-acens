@@ -1,9 +1,9 @@
-import models from "../../../models";
+import { Users } from "../../../models";
 
-class listUserByIdUseCase {
+class ListUserByIdUseCase {
     async execute(id: string) {
         try {
-            const user = await models.Users.scope("all").findByPk(id, {
+            const user = await Users.scope("all").findByPk(id, {
                 paranoid: false
             });
     
@@ -17,3 +17,5 @@ class listUserByIdUseCase {
         }
     }
 }
+
+export { ListUserByIdUseCase }
