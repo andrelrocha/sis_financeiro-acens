@@ -27,6 +27,10 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Users',
+    scopes: {
+      all: { where: {} }
+    },
+    paranoid: true,
   });
   return Users;
 };
